@@ -1,0 +1,908 @@
+/* Apply Plus Jakarta Sans to all text content */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.masthead-title{
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
+
+.masthead-text {
+
+    position: relative; /* Ensure it’s positioned relative for z-index */
+    color: rgb(255, 255, 255);
+    padding: 10px; /* Add padding to ensure text isn't too close to the edges */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adjust values as needed */
+}
+
+/* #masthead-span-text,#masthead-span-title{
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+} */
+
+.masthead-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Place the overlay behind the text */
+}
+#program{
+    background-color: #632CD0;
+h2{
+    color: white;
+}
+
+h4{
+    color: #0057FA;
+}
+}
+
+/* Default Accordion Button Style */
+.accordion-button {
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+
+
+/* Custom Style for Accordion Button when expanded */
+.accordion-button:not(.collapsed) {
+    background-color: #0057FA; /* Change to desired color */
+    color: white; /* Text color when expanded */
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.125); /* Remove any lingering shadow */
+}
+
+
+/* Custom Style for Accordion Button when collapsed */
+.accordion-button.collapsed {
+    background-color: #ffffff; /* Change to desired color */
+    color: #000; /* Text color when collapsed */
+}
+
+/* Reset Focus Styles to Avoid Lingering Effects */
+.accordion-button:focus {
+    box-shadow: none; /* Remove focus shadow */
+}
+
+header,section{
+    border-bottom: 3px solid black;
+}
+
+#testinomials{
+    background-color: #FFFBF3;
+h2{
+    color: #0057FA;
+}
+.card{
+    border: 3px dashed #0D1321;
+}
+
+}
+
+/* Specific styles for the custom card */
+.testinomials-video{
+    border-radius: 30px;
+    max-height: 300px;
+    max-width: 600px;
+}
+
+#outcomes{
+    background-color: #FFFBF3;
+h2{
+    color: #0057FA;
+}
+}
+
+
+
+#about h2{
+    color: #632CD0;
+    
+}
+
+#about .btn, #gallery .btn {
+    background-color: #F881ED; /* Pink */
+    color: white;  /* Text color */
+    border: none;  /* Optional: Remove border if needed */
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    border-radius: 0.25rem; /* Optional: Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#activity1 {
+    background-color: #ffffff;
+    border-radius: 25px;
+    text-align: center; /* Existing */
+    
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    height: 70px;            /* Increase height */
+    padding-top: 10px;       /* Adjust padding to move the text down */
+}
+
+#contribution .btn, #gallery .btn {
+    background-color: #F881ED; /* Pink */
+    color: white;  /* Text color */
+    border: none;  /* Optional: Remove border if needed */
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    border-radius: 0.25rem; /* Optional: Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Change color on hover */
+#about .btn:hover, #gallery .btn:hover, #contribution .btn:hover {
+    background-color: #FF931E; /* Orange */
+}
+
+/* Change color when clicked (active) */
+#about .btn:active, #gallery .btn:active {
+    background-color: #EE3F36; /* Red */
+}
+
+.custom-card .custom-card-body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.custom-card .custom-card-body .card-title {
+margin-bottom: 15px;
+}
+
+.custom-card .custom-card-body .card-text {
+margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+.custom-card .custom-card-body {
+    text-align: center;
+}
+}
+
+#gallery{
+    background-color: white;
+}
+
+#objectives{
+    background-color: #FFFBF3;
+h2{
+    color: #0057FA;
+}
+
+}
+
+/* Ensure that the timeline line is positioned correctly */
+.timeline-wrapper {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem; /* Adjust as needed */
+    width: calc(100% - 1rem); /* Ensure it spans the full width minus padding */
+    height: 2px;
+    background-color: #0D1321; /* Or any color of your choice */
+    z-index: 1; /* Ensure it is below the cards */
+}
+
+
+
+.item .time {
+    position: relative;
+    left: 30%;
+    width: 8rem; /* Ensure time is correctly positioned */
+    text-align: center;
+    background: #fff; /* Background color if needed */
+    z-index: 2; /* Ensure it appears above the line */
+    border: 3px solid #0D1321
+}
+@media (max-width: 991px) {
+    .item .time{
+        left:35%;
+    }
+}
+@media (max-width: 767px) {
+    .item .time{
+        left:25%;
+    }
+}
+@media (max-width: 576px) {
+    .item .time{
+        left:30%;
+    }
+}
+
+
+article {
+display: grid;
+margin-top: min(1.5rem, 5vw);
+width: 90vw;
+max-width: 56.25rem;
+margin: auto;
+
+@media (min-width: 57.06rem) {
+    grid-template-columns: 22.5rem 1fr;
+}
+}
+
+#partners{
+    background-color: #FFFBF3;
+h2{
+    color: #0057FA;
+}
+}
+
+#partners .card{
+    border: 3px dashed #0D1321;
+}
+
+.img-container {
+grid-row: 1 / span 2;
+grid-column: 1;
+z-index: 1;
+height: min(15rem, 60vw);
+width: 100%;
+background-image:
+    var(--mobile-illustration1),
+    var(--mobile-illustration2);
+background-repeat: no-repeat;
+background-size: auto 85%, auto 50%;
+background-position: 50% 0%, 50% 100%;
+
+@media (min-width: 57.06rem) {
+    grid-row: 1;
+    grid-column: 1;
+    height: 100%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1.25rem 0 0 1.25rem;
+    background-image:
+    var(--desktop-illustration1),
+    var(--desktop-illustration2);
+    background-size: 120%, auto;
+    background-position: 100% 50%, 100% 60%;
+
+    &::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 50%;
+    background-image:
+        var(--desktop-illustration3);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: left 65%;
+    position: relative;
+    left: -24.5%;
+    }
+}
+}
+
+#faq{
+    background-color: #0D1321;
+}
+
+.faq {
+grid-row: 2 / span 2;
+grid-column: 1;
+padding: min(7.5rem, 30vw) 1.5rem 2.5rem;
+background-color: hsl(0, 0%, 100%);
+border-radius: 1.25rem;
+box-shadow: 0 0.62rem 1.87rem hsla(0, 0%, 0%, .2);
+
+@media (min-width: 57.06rem) {
+    grid-row: 1;
+    grid-column: 2;
+    padding: 3.5rem 4rem 3.5rem;
+    border-radius: 0 1.25rem 1.25rem 0;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 1.2em 0;
+
+    @media (min-width: 57.06rem) {
+    text-align: left;
+    margin: 0 0 1.65em 0;
+    }
+}
+
+.q-a {
+    font-size: 0.95rem;
+    
+    padding-bottom: 1.05em;
+    margin-top: 1.05em;
+}
+
+.q-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+h3 {
+    font-size: 0.95rem;
+    grid-column: 1;
+    color: #0D1321;
+    cursor: pointer;
+
+    &:hover {
+    color: #06BDFC;
+    }
+
+    &.h3-active {
+    color: #0057FA;
+    font-weight: 700;
+    }
+}
+
+svg {
+    grid-column: 2;
+    justify-self: end;
+    cursor: pointer;
+    transition: transform 0.2s;
+    
+    &.svg-animation {
+    transform: rotate(180deg);
+    }
+}
+
+p {
+    display: none;
+    width: calc(100% - calc(10px + 0.7rem));
+    color: #0D1321;
+    margin-top: 1.05em;
+
+    &.p-visible {
+    display: block;
+    }
+}
+}
+
+#about img {
+    max-width: 80%; /* Ensures the image doesn't exceed 80% of the container width */
+    height: auto; /* Maintains aspect ratio */
+}
+
+@media (max-width: 768px) {
+    #about img {
+        max-width: 100%; /* Allows logo to be responsive on smaller screens */
+    }
+}
+
+.slider {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+#founders .card{
+    border: 2px solid #0D1321;
+    box-shadow: #0D1321 3px 3px 3px;
+}
+
+#partners q {
+    font-weight: bold;
+    display: block; /* This makes the quote occupy its own line */
+    margin: 0.5rem 0; /* Optional: add some margin around the quote */
+  }
+
+#contact {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0%;
+    background-color: #632CD0;
+}
+.contact-container{
+    height: 850px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.contact-left{
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    gap:20px;
+    max-width: 50%;
+}
+
+.contact-left-title h2{
+    font-weight:600;
+    font-size:40px;
+    margin-bottom:5px;
+    color: white;
+}
+
+.contact-left-title p{
+    font-weight:600;
+    font-size:20px;
+    margin-bottom:5px;
+    color: #F881ED;
+    max-width: 70%;
+}
+
+.contact-left-title hr{
+    border:none;
+    width:120px;
+    height:5px;
+    border-radius:10px;
+    margin-bottom:20px;
+    border: 5px solid #F881ED;
+}
+
+.contact-inputs{
+    width:400px;
+    height:50px;
+    border:none;
+    outline:none;
+    padding-left:25px;
+    font-weight:500;
+    color:#666;
+    border-radius:50px;
+}
+
+.contact-left textarea{
+    height:140px;
+    padding-top:15px;
+    border-radius:20px;
+}
+
+.contact-inputs:focus{
+    border:2px solid #06BDFC;
+}
+
+.contact-inputs::placeholder{
+    color:#a9a9a9;
+}
+
+.contact-left button{
+    display:flex;
+    align-items:center;
+    padding:15px 30px;
+    font-size:16px;
+    color:white;
+    gap:10px;
+    border:none;
+    border-radius: 50px;
+    background:#F881ED;
+    cursor:pointer;
+}
+
+.contact-left button img{
+    height:15px;
+}
+.contact-right {
+    display: flex;
+    justify-content: center; /* Center the image horizontally within its container */
+    align-items: center; /* Center the image vertically within its container */
+    margin-top: 20px; /* Add margin-top to ensure space from the input section */
+}
+
+.contact-right img {
+    width: 300px;
+}
+
+@media (max-width:800px){
+    .contact-inputs{
+        width:80vw;
+    }
+    .contact-right{
+        display:none;
+    }
+    .contact-left-title p{
+        max-width: 100%;
+    }
+    .contact-left{
+        max-width: 100%;
+    }
+    
+}
+
+#contact-d2{
+    color: #06BDFC;
+}
+/* Custom card styling */
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    width: 256px;
+
+}
+
+.card-body {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.card-footer {
+    border-top: none;
+    text-align: right;
+    padding: 5px 0;
+}
+
+.card-footer a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Load the page into header section after click see more button*/
+.lazy-header {
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+}
+
+.lazy-header.loaded {
+    opacity: 1; 
+}
+
+/* Enhanced carousel navigation arrows */
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10%; /* Make the button circular */
+    padding: 12px; /* Adjust padding for larger buttons */
+    width: 45px; /* Adjust button width */
+    height: 45px; /* Adjust button height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem; /* Icon size */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+#contribution{
+
+    .owl-nav .owl-prev {
+        left: -20px; /* Adjust to stay within the container */
+        background-color: #FFFFFF;
+    }
+    
+    .owl-nav .owl-next {
+        right: -20px; /* Adjust to stay within the container */
+        background-color: #FFFFFF;
+    }
+    .owl-theme .owl-nav [class*=owl-]:hover {
+        background-color: #126DF2; /* Blue-D: A deep, elegant blue for the background */
+        color: #F7F7FC; /* CG-01: A soft, near-white color for the arrow sign */
+    }
+}
+
+
+
+/* Position adjustments */
+.owl-nav .owl-prev {
+    left: 10px; /* Adjust to stay within the container */
+}
+
+.owl-nav .owl-next {
+    right: 10px; /* Adjust to stay within the container */
+}
+
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge button on hover */
+}
+
+.owl-nav .owl-prev:active,
+.owl-nav .owl-next:active {
+    transform: translateY(-50%) scale(0.95); /* Slightly shrink on click for a press effect */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .owl-nav .owl-prev,
+    .owl-nav .owl-next {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .owl-nav .owl-prev {
+        left: 5px;
+    }
+
+    .owl-nav .owl-next {
+        right: 5px;
+    }
+}
+
+/* Change the default color of the dots */
+.owl-theme .owl-dots .owl-dot span {
+    background-color: #A4A4AE; /* CG-06: A subtle, neutral gray */
+}
+
+/* Change the color of the active dot */
+.owl-theme .owl-dots .owl-dot.active span {
+    background-color: #0D1321; /* Black: A strong, elegant black for emphasis */
+}
+
+/* Optional: Change color on hover */
+.owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #126DF2; /* Purple: A rich, sophisticated purple */
+}
+
+
+.owl-theme .owl-nav [class*=owl-] {
+    border-radius: 50%;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background-color: #126DF2; /* Blue-D: A deep, elegant blue for the background */
+    color: #F7F7FC; /* CG-01: A soft, near-white color for the arrow sign */
+}
+
+
+
+/* Reduce padding for nav links to make the navbar more compact */
+.navbar-nav .nav-link {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+
+/* Reduce margin between nav items */
+.navbar-nav .nav-item {
+    margin: 0.5rem;
+}
+
+/* Optional: Decrease font size to fit more items */
+.navbar-nav .nav-link {
+    font-size: 0.875rem; /* Smaller font size (14px) */
+}
+
+/* Adjust the dropdown toggle for a consistent appearance */
+.navbar-nav .dropdown-toggle::after {
+    margin-left: 0.25rem;
+}
+
+/* Adjust navbar-brand spacing to make more room */
+.navbar-brand {
+    margin-right: 1rem;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* or center, depending on your layout */
+}
+
+/* Ensure dropdowns open on top of other content without shifting layout */
+.navbar .dropdown-menu {
+    position: absolute; /* Position the dropdown absolutely */
+    left: 0; /* Align it to the left of the parent */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Adjust the dropdown width and prevent it from expanding too much */
+.navbar .dropdown-menu {
+    min-width: 100px; /* Set a reasonable minimum width */
+    max-width: 300px; /* Set a maximum width to avoid excessive expansion */
+}
+
+/* Ensure the dropdown is contained within the navbar */
+.navbar .dropdown {
+    position: relative; /* Ensure dropdown is positioned relative to its parent */
+}
+
+
+
+/* Adjustments for smaller screens (less than lg) */
+@media (max-width: 991.98px) {
+    /* Optional: Limit the height for vertical scrolling, useful if you have many items */
+    .navbar-nav {
+        max-height: 50vh; /* Limit the height of the navbar on smaller screens */
+        overflow-y: auto; /* Enable vertical scrolling if items overflow */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0.5vh; /* Smaller margin for better fit */
+    }
+
+    .navbar {
+        max-height: 70vh; /* Adjust the height limit for smaller screens */
+        overflow-y: auto; /* Enable scrolling within the navbar */
+    }
+}
+
+
+
+
+/* Footer */
+.footer {
+    position: relative;
+    background-color: #0D1321;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icon,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap; /* Ensure items wrap to the next line if necessary */
+}
+
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon__link:hover {
+    color: #ffffff;
+    transform: translateY(-10px);
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.menu__link:hover {
+    color: #06BDFC;
+    transform: translateY(-5px);
+}
+
+.footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Custom CSS for footer menu links */
+.footer .menu__link {
+    font-size: 1rem; /* Default size for large screens */
+}
+
+@media (max-width: 768px) {
+    .footer .menu__link {
+        font-size: 0.875rem; /* Slightly smaller size for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer .menu__link {
+        font-size: 0.75rem; /* Smaller size for small screens */
+    }
+}
+
+.footer .menu__item {
+    margin-bottom: 0.5rem;
+}
+
+/* Horizontal arrangement on smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 30px;
+    }
+
+    .footer .menu {
+        justify-content: space-around; /* Spread items more evenly */
+    }
+
+    .footer .menu__item {
+        margin-bottom: 0.5rem; /* Ensure consistent spacing */
+    }
+
+    .footer .menu__link {
+        margin: 5px 8px; /* Adjust spacing between links */
+        display: inline-block;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 20px 15px;
+    }
+
+    .footer .menu {
+        justify-content: space-evenly; /* Spread items as evenly as possible */
+    }
+
+    .footer .menu__link {
+        margin: 5px 5px; /* Further adjust spacing */
+        display: inline-block;
+    }
+}
+
+.filler_rainbow {
+    background: linear-gradient(
+        135deg,  /* Diagonal flow for more natural transition */
+        #FF5400,  /* Orange-B */
+        #FF931E,  /* Orange */
+        #FFD500,  /* Yellow */
+        #DEFF04,  /* Lime */
+        #3AC152,  /* Green */
+        #06BDFC,  /* Capri */
+        #126DF2,  /* Blue-B */
+        #632CD0,  /* Purple */
+        #F881ED,  /* Pink */
+        #FF5400   /* Repeat Orange-B to create a seamless loop */
+    );
+    background-size: 300% 300%;  /* Increase both dimensions for smoother transition */
+    animation: flowDiagonal 5s linear infinite;  /* Adjust duration for smooth looping */
+    height: 5vh;  /* Adjust height as needed */
+}
+
+/* Define the seamless diagonal flowing animation */
+@keyframes flowDiagonal {
+    0% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;  /* Diagonal direction */
+    }
+}
